@@ -20,34 +20,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Set the app into full screen mode
-//        getWindow().getDecorView().setSystemUiVisibility(flags);
 
-//        //Following code allow the app packages to lock task in true kiosk mode
-//        setContentView(R.layout.activity_main);
-//        // get policy manager
-//        DevicePolicyManager myDevicePolicyManager = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
-////        // get this app package name
-//        ComponentName mDPM = new ComponentName(this, AdminReceiver.class);
-////
-//        if (myDevicePolicyManager.isDeviceOwnerApp(this.getPackageName())) {
-////            // get this app package name
-//            String[] packages = {this.getPackageName()};
-////            // mDPM is the admin package, and allow the specified packages to lock task
-//            myDevicePolicyManager.setLockTaskPackages(mDPM, packages);
-////            myDevicePolicyManager.setLockTaskPackages(mDPM,packages);
-//////            myDevicePolicyManager.setLockTaskFeatures(mDPM,DevicePolicyManager.LOCK_TASK_FEATURE_GLOBAL_ACTIONS);
-//////            myDevicePolicyManager.setLockTaskFeatures(mDPM,DevicePolicyManager.LOCK_TASK_FEATURE_HOME);
-//////            myDevicePolicyManager.setLockTaskFeatures(mDPM,DevicePolicyManager.LOCK_TASK_FEATURE_KEYGUARD);
-//////            myDevicePolicyManager.setLockTaskFeatures(mDPM,DevicePolicyManager.LOCK_TASK_FEATURE_NOTIFICATIONS);
-//////            myDevicePolicyManager.setLockTaskFeatures(mDPM,DevicePolicyManager.LOCK_TASK_FEATURE_OVERVIEW);
-//////            myDevicePolicyManager.setLockTaskFeatures(mDPM,DevicePolicyManager.LOCK_TASK_FEATURE_SYSTEM_INFO);
-//////            myDevicePolicyManager.getLockTaskPackages(mDPM);
-//////            myDevicePolicyManager.getLockTaskFeatures(mDPM);
-//            startLockTask();
-//        } else {
-//            Toast.makeText(getApplicationContext(), "Not owner", Toast.LENGTH_LONG).show();
-//        }
+        DevicePolicyManager myDevicePolicyManager = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
+
+        ComponentName mDPM = new ComponentName(this, AdminReceiver.class);
+
+        if (myDevicePolicyManager.isDeviceOwnerApp(this.getPackageName())) {
+            String[] packages = {this.getPackageName()};
+            myDevicePolicyManager.setLockTaskPackages(mDPM, packages);
+            startLockTask();
+        } else {
+            Toast.makeText(getApplicationContext(), "Not owner", Toast.LENGTH_LONG).show();
+        }
     }
 
 
