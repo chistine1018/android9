@@ -13,7 +13,13 @@
 Build a project 
 ### Second.
 Create an xml like this :
-![xml](https://raw.githubusercontent.com/chistine1018/android9/master/image/螢幕快照%202018-09-17%2019.42.17.png)
 ![xml](https://raw.githubusercontent.com/chistine1018/android9/master/image/螢幕快照%202018-09-17%2020.16.00.png)
+
+
+
+
+
+
+![xml](https://raw.githubusercontent.com/chistine1018/android9/master/image/螢幕快照%202018-09-17%2019.42.17.png)
 ![xml](https://raw.githubusercontent.com/chistine1018/android9/master/image/螢幕快照%202018-09-17%2019.41.59.png)
 ![xml](https://raw.githubusercontent.com/chistine1018/android9/master/image/螢幕快照%202018-09-17%2019.41.00.png)
