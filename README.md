@@ -18,17 +18,20 @@ Create an xml like this :
 
 ### Third.
 The content of lock_screen.xml
+
 ![xml](https://raw.githubusercontent.com/chistine1018/android9/master/image/螢幕快照%202018-09-17%2019.42.17.png)
 
 ### Fourth.
 Declare the receiver in Manifest.xml, in your <applicatio>n element :
   
-### Fifth.
 ![xml](https://raw.githubusercontent.com/chistine1018/android9/master/image/螢幕快照%202018-09-17%2019.41.59.png)
 
-### Sixth.
-![xml](https://raw.githubusercontent.com/chistine1018/android9/master/image/螢幕快照%202018-09-17%2019.41.00.png)
+### Fifth.
+Before you call startLockTask(), you need to allow the your app to pin the screen as device owner
 
+### Sixth.
+
+![xml](https://raw.githubusercontent.com/chistine1018/android9/master/image/螢幕快照%202018-09-17%2019.41.00.png)
 
 
 
